@@ -4,7 +4,9 @@ laravel starter Template, to save your time when You start with new scalable Lar
 
 ### [ Another Laravel8 Starter with jetstream and Livewire ](https://github.com/omaralalwi/modern_laravel_starter)
 
-# based on Laravel 8.x
+# Based on Laravel8.x
+
+![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
 
 # Custom Commands
 
@@ -32,7 +34,6 @@ It is a modular application, and a number of modules are installed by default. I
 * Admin feature and public views are completely separated as `Backend` and `Frontend` namespace.
 * Major feature are developed as `Modules`. Module like Posts, Comments, Tags are separated from the core features like User, Role, Permission
 
-
 ## Core Features
 
 * User Authentication
@@ -45,9 +46,7 @@ It is a modular application, and a number of modules are installed by default. I
   * Separate User Profile table
 * Role-Permissions for Users
 * Dynamic Menu System
-* All Stubs are ready to customize.
 * Language Switcher
-* Localization enable across the porject
 * Backend Theme
   * Bootstrap 4, CoreUI
   * Fontawesome 5
@@ -67,20 +66,23 @@ It is a modular application, and a number of modules are installed by default. I
   * Fontawesome 5
   * CoreUI
   * Impact Design Kit
-  * Datatables
   * Select2
   * Date Time Picker
 * Backup (Source, Files, Database as Zip)
 * Log Viewer
+* Built by Modules (microservices) Archticture
 * Notification
   * Dashboard and details view
 * RSS Feed
+* Localization Switcher Frontend and Backend
 * RTL Support by one click ,Just change language to Arabic , it will change Direction to RTL
-* Mulitlanguage models
-* Built by Modules (microservices) Archticture .
+* Eloquent models translatable with [spatie/laravel-translatable] (https://github.com/spatie/laravel-translatable)
 * SEO Friendly by Forcing all frontend routes with locale prefix
 * with Spatie Media Library and conversitions
-* with Yajra DataTables
+* with [Yajra DataTables](https://github.com/yajra/laravel-datatables)
+* with [infyom Laravel Generator](https://github.com/InfyOmLabs/laravel-generator)
+* All Stubs are ready to customize.
+
 
 # User Guide
 
@@ -134,6 +136,25 @@ User: user@user.com
 Pass: secret
 
 ```
+
+## Screenshots
+
+these some screenshotes 
+
+![backend-ltr](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-ltr.png)
+
+![backend-rtl](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl.png)
+
+![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
+
+![backend-rtl3](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl3.png)
+
+![frontend1](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend1.png)
+
+![frontend2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
+
+## Thanks
+many benfits and features taked from [ asirkhan ](https://github.com/nasirkhan/laravel-starter)
 
 # Developer
 Please if you Note any bugs OR issues, contact me:
