@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a12ecb5bb39c7ebd9efd53364b74f1c",
+    "content-hash": "71749e6e5c532bf871910c318f40b74a",
     "packages": [
         {
             "name": "alexusmai/laravel-file-manager",
@@ -5303,32 +5303,6 @@
             "time": "2020-11-11T09:24:22+00:00"
         },
         {
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "reference": "5c258e44c2336076429f6b5e9415b46ca58d05a1"
-            },
-            "require": {
-                "illuminate/database": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "laravel/tinker": "^2.5",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^6.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-f": [
-                    "vendor/bin/phpunit --filter"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-        },      
             "name": "opis/closure",
             "version": "3.6.1",
             "source": {
@@ -5364,6 +5338,17 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-f": [
+                    "vendor/bin/phpunit --filter"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
             "license": [
                 "MIT"
             ],

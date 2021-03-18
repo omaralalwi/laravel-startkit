@@ -46,7 +46,6 @@ It is a modular application, and a number of modules are installed by default. I
   * Separate User Profile table
 * Role-Permissions for Users
 * Dynamic Menu System
-* Language Switcher
 * Backend Theme
   * Bootstrap 4, CoreUI
   * Fontawesome 5
@@ -74,14 +73,18 @@ It is a modular application, and a number of modules are installed by default. I
 * Notification
   * Dashboard and details view
 * RSS Feed
-* Localization Switcher Frontend and Backend
+
+## Additional features
+
+* Well Structure of Scalable Laravel Projects (Modules Structure, Folders,Routes,Controllers,Views)
+* Language Switcher Frontend and Backend (with middleware)
 * RTL Support by one click ,Just change language to Arabic , it will change Direction to RTL
 * Eloquent models translatable with [spatie/laravel-translatable](https://github.com/spatie/laravel-translatable)
 * SEO Friendly by Forcing all frontend routes with locale prefix
 * with Spatie Media Library and conversitions
 * with [Yajra DataTables](https://github.com/yajra/laravel-datatables)
 * with [infyom Laravel Generator](https://github.com/InfyOmLabs/laravel-generator)
-* All Stubs are ready to customize.
+* All Stubs are ready to customize
 
 
 # User Guide
@@ -110,6 +113,33 @@ FontAwesome & CoreUI Icons, two different font icon library is installed for the
 
 * **FontAwesome** - https://fontawesome.com/icons?d=gallery&m=free
 * **CoreUI Icons** - https://icons.coreui.io/icons/
+
+## Making a model translatable
+- According to spaite pakcage:-
+- to make default local open config/translatable and edit 'fallback_locale' => null, to your prefferd local like: 'fallback_locale' => ar, if you prefer Arabic.
+- NOTE: This prefferd local for translated models not for App local, this mean if you insert product with many languages the primary language will be ar.
+
+The required steps to make a model translatable are:
+
+- First, you need to add the `Spatie\Translatable\HasTranslations`-trait.
+- Next, you should create a public property `$translatable` which holds an array with all the names of attributes you wish to make translatable.
+- Finally, you should make sure that all translatable attributes are set to the `text`-datatype in your database. If your database supports `json`-columns, use that.
+
+Here's an example of a prepared model:
+
+``` php
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
+
+class NewsItem extends Model
+{
+    use HasTranslations;
+    
+    public $translatable = ['name'];
+}
+```
+
+- All Toturials for Translation [here](https://github.com/spatie/laravel-translatable) , you do't need to install it , it is preinstalled, Just see Toturials.
 
 # insert Demo Data in DB
 
@@ -154,7 +184,7 @@ these some screenshotes
 ![frontend2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
 
 ## Thanks
-many benfits and features taken from [ Mr. nasirkhan ](https://github.com/nasirkhan/laravel-starter)
+All Core Features taken from [ Mr. nasirkhan ](https://github.com/nasirkhan/laravel-starter)
 
 ## Development
 
