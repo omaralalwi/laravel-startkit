@@ -8,6 +8,15 @@ laravel starter Template, to save your time when You start with new scalable Lar
 
 ![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
 
+#Requirements
+
+please be careful about the Requirements:-
+- Highly Recommended  to use it with PHP v7.4 or up, and ensure that , the version used by composer is 7.4 to Avoid any problems with contianed packages.
+- All packages work probably with PHP 7.2, BUT PHP7.4 and The exif extension is required for Spatie Media Library.
+
+## IMPORTANT NOTE
+if you have PHP7.4 you will use this template with all features without any problems, but if your PHP under 7.4 you Can NOT use it with Spatie Media Library, SO you must uninstall Spatie Media Library or Upgrade your php to 7.4 or UP [see more about Spatie Media Library here](https://spatie.be/docs/laravel-medialibrary/v9/introduction)
+
 # Custom Commands
 
 I have created a number of custom commands for the project. The commands are listed below with a brief about the use of it.
