@@ -76,7 +76,7 @@ It is a modular application, and a number of modules are installed by default. I
 * RSS Feed
 * Localization Switcher Frontend and Backend
 * RTL Support by one click ,Just change language to Arabic , it will change Direction to RTL
-* Eloquent models translatable with [spatie/laravel-translatable] (https://github.com/spatie/laravel-translatable)
+* Eloquent models translatable with [spatie/laravel-translatable](https://github.com/spatie/laravel-translatable)
 * SEO Friendly by Forcing all frontend routes with locale prefix
 * with Spatie Media Library and conversitions
 * with [Yajra DataTables](https://github.com/yajra/laravel-datatables)
@@ -154,13 +154,13 @@ these some screenshotes
 ![frontend2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
 
 ## Thanks
-many benfits and features taked from [ asirkhan ](https://github.com/nasirkhan/laravel-starter)
+many benfits and features taked from [ nasirkhan ](https://github.com/nasirkhan/laravel-starter)
 
 # Developer
 Please if you Note any bugs OR issues, contact me:
 
 Omar Alalwi
-[ Twitter ](https://twitter.com/omaralalwi2013)
-[ Linkedin ](https://www.linkedin.com/in/omaralalwi)
-hire me in [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
-[ Email ](mailto:Contact@omaralalwi.info)
+Contact ME in [ Twitter ](https://twitter.com/omaralalwi2013)
+Contact ME in [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
+Hire me in [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
+OR Contact by [ Email ](mailto:Contact@omaralalwi.info)
