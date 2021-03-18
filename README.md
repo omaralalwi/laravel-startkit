@@ -193,7 +193,7 @@ these some screenshotes
 ![frontend2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
 
 ## Thanks
-All Core Features taken from [ Mr. nasirkhan ](https://github.com/nasirkhan/laravel-starter)
+All Core Features taken from  Mr. nasirkhan
 
 ## Development
 
