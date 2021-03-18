@@ -134,7 +134,7 @@ Pass: secret
 ```
 
 # Developer
-Please if you Note any buge of issue, contact me:
+Please if you Note any bugs OR issues, contact me:
 
 Omar Alalwi
 [ Twitter ](https://twitter.com/omaralalwi2013)
