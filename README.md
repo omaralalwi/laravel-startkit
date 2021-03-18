@@ -1,3 +1,7 @@
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/omaralalwi/laravel-starter-template/master.svg?style=flat-square)](https://travis-ci.org/omaralalwi/laravel-starter-template)
+[![Total Downloads](https://img.shields.io/packagist/dt/omaralalwi/laravel-starter-template.svg?style=flat-square)](https://packagist.org/packages/omaralalwi/laravel-starter-template)
+
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
 # based on Laravel 8.x
