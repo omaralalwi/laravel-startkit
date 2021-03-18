@@ -156,11 +156,15 @@ these some screenshotes
 ## Thanks
 many benfits and features taked from [ nasirkhan ](https://github.com/nasirkhan/laravel-starter)
 
-# Developer
-Please if you Note any bugs OR issues, contact me:
+## Credits
 
-Omar Alalwi
-Contact ME in [ Twitter ](https://twitter.com/omaralalwi2013)
-Contact ME in [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
-Hire me in [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
+- [Omar Alalwi](https://github.com/omaralalwi)
+
+Contact ME  [ Twitter ](https://twitter.com/omaralalwi2013)
+Contact ME  [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
+Hire me  [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
 OR Contact by [ Email ](mailto:Contact@omaralalwi.info)
+
+## License
+
+This  Project is open sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
