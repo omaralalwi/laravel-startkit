@@ -137,10 +137,7 @@ Pass: secret
 Please if you Note any buge of issue, contact me:
 
 Omar Alalwi
-[ Github -> omaralalwi ](https://github.com/omaralalwi)
-[ Gitlab -> omaralalwi ](https://gitlab.com/omaralalwi)
-[ Twitter -> omaralalwi2013 ](https://twitter.com/omaralalwi2013)
-[ Linkedin -> omaralalwi ](https://www.linkedin.com/in/omaralalwi)
-[ hire me in Freelancer -> omaralalwi2010 ](https://www.freelancer.com/u/omaralwi2010)
-[ Email -> Contact@omaralalwi.info ](mailto:Contact@omaralalwi.info)
-Mobile & [ Whatsapp -> +967-770902927](http://https//api.whatsapp.com/send?phone=967770902927)
+[ Twitter ](https://twitter.com/omaralalwi2013)
+[ Linkedin ](https://www.linkedin.com/in/omaralalwi)
+hire me in [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
+[ Email ](mailto:Contact@omaralalwi.info)
