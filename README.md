@@ -154,11 +154,15 @@ these some screenshotes
 ![frontend2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
 
 ## Thanks
-many benfits and features taked from [ nasirkhan ](https://github.com/nasirkhan/laravel-starter)
+many benfits and features taken from [ Mr. nasirkhan ](https://github.com/nasirkhan/laravel-starter)
+
+## Development
+
+This project will continue to evolve and grow, until it becomes the first Laravel Starter Template, follwo me to still up to date.
 
 ## Credits
 
-- [Omar Alalwi](https://github.com/omaralalwi)
+- [Mr. Omar Alalwi](https://github.com/omaralalwi)
 
 Contact ME  [ Twitter ](https://twitter.com/omaralalwi2013)
 Contact ME  [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
