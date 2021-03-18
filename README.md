@@ -2,6 +2,8 @@
 
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
+## [ Another Laravel8 Starter with jetstream and Livewire ](https://github.com/omaralalwi/modern_laravel_starter)
+
 # based on Laravel 8.x
 
 # Custom Commands
