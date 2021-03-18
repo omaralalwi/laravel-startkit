@@ -1,0 +1,36 @@
+<?php
+
+return array (
+
+'copyright' => 'Copyright',
+'rights_reserved' => 'All Rights Reserved',
+'company_name' => 'HackathonSoft',
+'company_activity' => ' For IT solutions and Web Services',
+'latest_products' => 'Featured Products',
+'your_messege_sent' => 'Your message has been Sent Successfully ,, Thank You for Contact Us',
+'useful_links' => 'Useful Links',
+'phone' => 'Phone',
+'mobile' => 'Mobile',
+'whatsapp' => 'WhatsApp',
+'email' => 'Email',
+'contact_paragraph' => 'You Can Send us message Now',
+'designedby' => 'Developed By',
+'developer_name' => 'Omar Alalwi',
+'subject' => 'subject',
+'message_content' => 'message content',
+'send_your_message' => 'Send Your Message Now',
+'subscribe_email' => 'Your Email',
+'subscribe_paragraph' => 'Subscribe To see all our news',
+'subscribe' => 'subscribe Us',
+'contactus' => 'Contact Us',
+
+'home' => 'Home',
+'courses' => 'courses',
+'forum' => 'forum',
+'blog' => 'blog',
+'products' => 'products',
+'aboutus' => 'About Us',
+'shortdesc' => 'You Deserve The Best', 
+'' => '', 
+'' => '',  
+);

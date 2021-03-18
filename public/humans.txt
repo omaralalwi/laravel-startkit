@@ -1,0 +1,10 @@
+/* TEAM */
+    The project has been developed by the contribution of the following people
+
+	Nasir Khan Saikat
+	Contact: nasir8891 [at] gmail [dot] com
+	Twitter: @nasir8891
+	Website: http://nasirkhn.com
+	From: Omar Alalwi, Yemen
+
+/* THANKS */
