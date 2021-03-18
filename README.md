@@ -115,7 +115,7 @@ FontAwesome & CoreUI Icons, two different font icon library is installed for the
 * **CoreUI Icons** - https://icons.coreui.io/icons/
 
 ## Making a model translatable
-- According to spaite pakcage:-
+ According to spaite pakcage:-
 - to make default local open config/translatable and edit 'fallback_locale' => null, to your prefferd local like: 'fallback_locale' => ar, if you prefer Arabic.
 - NOTE: This prefferd local for translated models not for App local, this mean if you insert product with many languages the primary language will be ar.
 
@@ -198,6 +198,10 @@ Contact ME  [ Twitter ](https://twitter.com/omaralalwi2013)
 Contact ME  [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
 Hire me  [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
 OR Contact by [ Email ](mailto:Contact@omaralalwi.info)
+
+## COMING SOON
+
+[GlobalTrans](https://github.com/omaralalwi/globaltrans) will be available SOON, it is A Laravel Package to make Eloquent models translatable to Unlimited Languages
 
 ## License
 
