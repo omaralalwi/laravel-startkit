@@ -8,7 +8,7 @@ laravel starter Template, to save your time when You start with new scalable Lar
 
 ![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
 
-#Requirements
+# Requirements
 
 please be careful about the Requirements:-
 - Highly Recommended  to use it with PHP v7.4 or up, and ensure that , the version used by composer is 7.4 to Avoid any problems with contianed packages.
