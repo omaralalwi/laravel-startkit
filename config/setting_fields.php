@@ -14,7 +14,7 @@ return [
                 'label' => 'App Name', // you know what label it is
                 'rules' => 'required|min:2|max:50', // validation rule of laravel
                 'class' => '', // any class for input
-                'value' => 'Laravel Starter', // default value if you want
+                'value' => 'Laravel Starter Template', // default value if you want
             ],
             [
                 'type'  => 'text', // input fields type
@@ -85,7 +85,7 @@ return [
                 'label' => 'Instagram Account URL', // you know what label it is
                 'rules' => 'required|nullable|max:191', // validation rule of laravel
                 'class' => '', // any class for input
-                'value' => 'https://instagram.com/shishuraishob', // default value if you want
+                'value' => 'https://instagram.com', // default value if you want
             ],
             [
                 'type'  => 'text', // input fields type
@@ -166,7 +166,7 @@ return [
                 'label' => 'Meta Twitter Site Account', // you know what label it is
                 'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
-                'value' => '@nasir8891', // default value if you want
+                'value' => '@omaralalwi2013', // default value if you want
             ],
             [
                 'type'  => 'text', // input fields type
@@ -175,7 +175,7 @@ return [
                 'label' => 'Meta Twitter Creator Account', // you know what label it is
                 'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
-                'value' => '@nasir8891', // default value if you want
+                'value' => '@omaralalwi2013', // default value if you want
             ],
         ],
     ],

@@ -76,6 +76,7 @@ It is a modular application, and a number of modules are installed by default. I
 * Built by Modules (microservices) Archticture .
 * SEO Friendly by Forcing all frontend routes with locale prefix
 * with Spatie Media Library and conversitions
+* with Yajra DataTables
 
 # User Guide
 
