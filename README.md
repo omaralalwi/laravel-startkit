@@ -1,4 +1,10 @@
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+<p align="center">
+![GitHub all releases](https://img.shields.io/github/downloads/omaralalwi/laravel-starter-template/total?color=%23108C01&label=Github%20Downloads&logo=Github&style=flat-square)
+![GitHub Release Date](https://img.shields.io/github/release-date/omaralalwi/laravel-starter-template?color=%2307A6A6&label=Latest%20Release&logo=Github&style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/omaralalwi/laravel-starter-template?color=%23174AD2&label=Github%20Forks&logo=Github&style=flat-square)
+![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
+</p>
 
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
@@ -204,8 +210,8 @@ This project will continue to evolve and grow, until it becomes the first Larave
 - [Mr. Omar Alalwi](https://github.com/omaralalwi)
 
 Contact ME  [ Twitter ](https://twitter.com/omaralalwi2013)
-Contact ME  [ Linkedin ](https://www.linkedin.com/in/omaralalwi)
-Hire me  [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
+OR Hire me on  [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
+OR Hire me on  [ UpWork ](https://www.upwork.com/fl/omaralalwi)
 OR Contact by [ Email ](mailto:Contact@omaralalwi.info)
 
 ## COMING SOON
