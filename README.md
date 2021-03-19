@@ -1,6 +1,5 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/omaralalwi/laravel-starter-template?logo=github&style=flat-square)
-![GitHub all releases](https://img.shields.io/github/downloads/omaralalwi/laravel-starter-template/total?logo=github&style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/omaralalwi/laravel-starter-template?color=%23345FF0%20&logo=github&style=flat-square)
 ![GitHub Release Date](https://img.shields.io/github/release-date/omaralalwi/laravel-starter-template?color=%2348C604%20&logo=github&style=flat-square)
 ![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
