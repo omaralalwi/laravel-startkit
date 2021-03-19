@@ -1,10 +1,9 @@
 
-![GitHub all releases](https://img.shields.io/github/downloads/omaralalwi/laravel-starter-template/total?color=%2319D303&logo=github)
+![GitHub Repo stars](https://img.shields.io/github/stars/omaralalwi/laravel-starter-template?logo=github&style=flat-square)
+![GitHub all releases](https://img.shields.io/github/downloads/omaralalwi/laravel-starter-template/total?logo=github&style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/omaralalwi/laravel-starter-template?color=%23345FF0%20&logo=github&style=flat-square)
-![GitHub Repo stars](https://img.shields.io/github/stars/omaralalwi/laravel-starter-template?color=%2314CFD8%20&logo=github&style=flat-square)
-![GitHub watchers](https://img.shields.io/github/watchers/omaralalwi/laravel-starter-template?color=%23A3BF06&logo=github&style=flat-square)
 ![GitHub Release Date](https://img.shields.io/github/release-date/omaralalwi/laravel-starter-template?color=%2348C604%20&logo=github&style=flat-square)
-![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)]
+![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
