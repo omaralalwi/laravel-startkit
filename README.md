@@ -6,8 +6,6 @@
 
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
-### [ Another Laravel8 Starter with jetstream and Livewire ](https://github.com/omaralalwi/modern_laravel_starter)
-
 # Based on Laravel8.x
 
 ![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
@@ -205,16 +203,12 @@ This project will continue to evolve and grow, until it becomes the first Larave
 
 ## Credits
 
-- [Mr. Omar Alalwi](https://github.com/omaralalwi)
+- [Omar Alalwi](https://github.com/omaralalwi)
 
 Contact ME  [ Twitter ](https://twitter.com/omaralalwi2013)
 OR Hire me on  [ Freelancer ](https://www.freelancer.com/u/omaralwi2010)
 OR Hire me on  [ UpWork ](https://www.upwork.com/fl/omaralalwi)
 OR Contact by [ Email ](mailto:Contact@omaralalwi.info)
-
-## COMING SOON
-
-[GlobalTrans](https://github.com/omaralalwi/globaltrans) will be available SOON, it is A Laravel Package to make Eloquent models translatable to Unlimited Languages
 
 ## License
 
