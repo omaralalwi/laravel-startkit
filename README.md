@@ -194,9 +194,6 @@ these some screenshotes
 
 ![frontend2 img](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
 
-## Thanks
-All Core Features taken from  Mr. nasirkhan
-
 ## Development
 
 This project will continue to evolve and grow, until it becomes the first Laravel Starter Template, follwo me to still up to date.
