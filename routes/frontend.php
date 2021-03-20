@@ -6,13 +6,7 @@
 *
 * --------------------------------------------------------------------
 */
-
-Route::resource('products', 'Backend\ProductsController');
-
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-
-// translated Routes for translated models
-	Route::get(trans('routes.product') . '/{product}', 'ProductsController@show')->name('product.show');
 
 		// Same thing for static pages like your about page
 	Route::view(trans('routes.about'), 'about')->name('page.about');
