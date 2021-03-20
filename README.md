@@ -4,9 +4,23 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/omaralalwi/laravel-starter-template?color=%2348C604%20&logo=github&style=flat-square)
 ![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 
+# Based on Laravel8.x
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
-# Based on Laravel8.x
+# [Live Demo](https://larastarter.me)
+you can see all things in live demo
+
+```
+Dashboard Creditional 
+Super Admin
+User: super@admin.com
+Pass: secret
+
+User
+User: user@user.com
+Pass: secret
+
+```
 
 ![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl3.png)
 
@@ -96,6 +110,7 @@ It is a modular application, and a number of modules are installed by default. I
 * with [Yajra DataTables](https://github.com/yajra/laravel-datatables)
 * with [infyom Laravel Generator](https://github.com/InfyOmLabs/laravel-generator)
 * All Stubs are ready to customize
+* Notifications for Admin
 
 
 # User Guide
@@ -166,18 +181,6 @@ php artisan starter:insert-demo-data --fresh
 
 ```
 
-```
-Dashboard Creditional 
-Super Admin
-User: super@admin.com
-Pass: secret
-
-User
-User: user@user.com
-Pass: secret
-
-```
-
 ## Screenshots
 
 these some screenshotes 
@@ -193,6 +196,8 @@ these some screenshotes
 ![frontend1 img](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend1.png)
 
 ![frontend2 img](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/frontend2.png)
+
+![userprofile update img](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/update_profile.png)
 
 ## Development
 
