@@ -6,10 +6,11 @@
 *
 * --------------------------------------------------------------------
 */
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath']],function () {
-	
+Route::group( //start LOCALIZED Routes 
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function(){ 
+			
 		Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Frontend', 'as' => 'frontend.', 'middleware' => 'web', 'prefix' => ''], function () {
 
 			/*
@@ -23,18 +24,14 @@ Route::group([
 			Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
 			Route::get("$module_name/{id}/{slug?}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
 		});
-});
-
+		
 		/*
 		*
 		* Backend Routes
 		*
 		* --------------------------------------------------------------------
 		*/
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath']],function () {
-
+		
 		Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Backend', 'as' => 'backend.', 'middleware' => ['web', 'auth', 'can:view_backend'], 'prefix' => 'admin'], function () {
 			/*
 			* These routes need view-backend permission
@@ -59,4 +56,4 @@ Route::group([
 			Route::resource("$module_name", "$controller_name");
 		});
 		
-});
+}); // END LOCALIZED Routes 

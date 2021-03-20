@@ -6,6 +6,11 @@
 *
 * --------------------------------------------------------------------
 */
+Route::group( //start LOCALIZED Routes 
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function(){ 
+			
 Route::group(['namespace' => '\Modules\Comment\Http\Controllers\Frontend', 'as' => 'frontend.', 'middleware' => 'web', 'prefix' => ''], function () {
 
     /*
@@ -27,11 +32,7 @@ Route::group(['namespace' => '\Modules\Comment\Http\Controllers\Frontend', 'as' 
 *
 * --------------------------------------------------------------------
 	*/
-	
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath']],function () {
-	
+
 	Route::group(['namespace' => '\Modules\Comment\Http\Controllers\Backend', 'as' => 'backend.', 'middleware' => ['web', 'auth', 'can:view_backend'], 'prefix' => 'admin'], function () {
 		/*
 		* These routes need view-backend permission
@@ -56,4 +57,4 @@ Route::group([
 		Route::resource("$module_name", "$controller_name");
 	});
 
-});
+}); // END LOCALIZED Routes 

@@ -10,36 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Auth Routes
-require __DIR__.'/auth.php';
-
-Route::group(
+Route::group( //start LOCALIZED Routes 
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-    ], 
-    function(){ //start Frontend LOCALIZED Routes
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function(){ 
+// all localized routes put them here
+
+        // Auth Routes
+    require __DIR__.'/auth.php';
     
     // frontend Routes
     require __DIR__.'/frontend.php';
 
-}); // colse Frontend LOCALIZED Routes
-
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath'] 
-    ], function(){ //start Backend LOCALIZED Routes
-    // Atom/ RSS Feed Routes 
-    Route::feeds();
-});
-
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath'] 
-    ], function(){ //start Backend LOCALIZED Routes
-
-    // backend Routes
+        // backend Routes
   require __DIR__.'/backend.php';
 
-}); // colse Backend 
+}); // ENd LOCALIZED Routes 
+
+// if you have not localized routes put them outside perviouse group, in the following section
+// not localized routes, puth them here
+
+    // Atom RSS Feed Routes 
+    Route::feeds();
