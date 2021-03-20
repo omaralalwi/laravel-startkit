@@ -145,27 +145,7 @@ FontAwesome & CoreUI Icons, two different font icon library is installed for the
 - to make default local open config/translatable and edit 'fallback_locale' => null, to your prefferd local like: 'fallback_locale' => ar, if you prefer Arabic.
 - NOTE: This prefferd local for translated models not for App local, this mean if you insert product with many languages the primary language will be ar.
 
-The required steps to make a model translatable are:
-
-- First, you need to add the `Spatie\Translatable\HasTranslations`-trait.
-- Next, you should create a public property `$translatable` which holds an array with all the names of attributes you wish to make translatable.
-- Finally, you should make sure that all translatable attributes are set to the `text`-datatype in your database. If your database supports `json`-columns, use that.
-
-Here's an example of a prepared model:
-
-``` php
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\HasTranslations;
-
-class NewsItem extends Model
-{
-    use HasTranslations;
-    
-    public $translatable = ['name'];
-}
-```
-
-- All Toturials for Translation [here](https://github.com/spatie/laravel-translatable) , you do't need to install it , it is preinstalled, Just see Toturials.
+- All Toturials for Translation package [here](https://github.com/spatie/laravel-translatable) , you do't need to install it , it is preinstalled, Just see Toturials.
 
 # insert Demo Data in DB
 
