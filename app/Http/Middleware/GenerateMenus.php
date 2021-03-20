@@ -25,7 +25,7 @@ class GenerateMenus
 
         \Menu::make('admin_sidebar', function ($menu) {
             // Dashboard
-            $menu->add('<i class="cil-speedometer c-sidebar-nav-icon"></i> Home Dashboard' , [
+            $menu->add('<i class="cil-speedometer c-sidebar-nav-icon"></i> ' . trans('oa_menues.backend.sidebar.dashboard') , [
                 'route' => 'backend.dashboard',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -52,7 +52,7 @@ class GenerateMenus
             ]);
 
             // Separator: Access Management
-            $menu->add('Management', [
+            $menu->add(trans('oa_menues.backend.sidebar.management'), [
                 'class' => 'c-sidebar-nav-title',
             ])
             ->data([
@@ -61,7 +61,7 @@ class GenerateMenus
             ]);
 
             // Settings
-           $menu->add('<i class="c-sidebar-nav-icon fas fa-cogs"></i> Settings', [
+           $menu->add('<i class="c-sidebar-nav-icon fas fa-cogs"></i> ' . trans('oa_menues.backend.sidebar.settings'), [
                 'route' => 'backend.settings',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -75,7 +75,7 @@ class GenerateMenus
             ]);
 
             // Backup
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-archive"></i> Backups', [
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-archive"></i> ' . trans('oa_menues.backend.sidebar.backups'), [
                 'route' => 'backend.backups.index',
                 'class' => 'nav-item',
             ])
@@ -89,7 +89,7 @@ class GenerateMenus
             ]);
 
             // Access Control Dropdown
-            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
+            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> ' . trans('oa_menues.backend.sidebar.access_control'), [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
@@ -106,7 +106,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Users
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Users', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> ' . trans('oa_menues.backend.sidebar.users'), [
                 'route' => 'backend.users.index',
                 'class' => 'nav-item',
             ])
@@ -120,7 +120,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Roles
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Roles', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> ' . trans('oa_menues.backend.sidebar.roles'), [
                 'route' => 'backend.roles.index',
                 'class' => 'nav-item',
             ])
@@ -135,7 +135,7 @@ class GenerateMenus
 
             // Log Viewer
             // Log Viewer Dropdown
-            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-list-rich"></i> Log Viewer', [
+            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-list-rich"></i> ' . trans('oa_menues.backend.sidebar.log_viewer'), [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
@@ -151,7 +151,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Log Viewer Dashboard
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-list"></i> Dashboard', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-list"></i> ' . trans('oa_menues.backend.sidebar.dashboard'), [
                 'route' => 'log-viewer::dashboard',
                 'class' => 'nav-item',
             ])
@@ -164,7 +164,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Log Viewer Logs by Days
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-list-numbered"></i> Logs by Days', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-list-numbered"></i>' . trans('oa_menues.backend.sidebar.logs_by_days'), [
                 'route' => 'log-viewer::logs.list',
                 'class' => 'nav-item',
             ])

@@ -18,13 +18,13 @@ class GenerateMenus
     {
         \Menu::make('admin_sidebar', function ($menu) {
             // Separator: Module Management
-            $all_modules = $menu->add('Modules', [
+            $all_modules = $menu->add(trans('oa_menues.backend.sidebar.modules'), [
                 'class' => 'c-sidebar-nav-title',
             ])
             ->data('order', 80);
 
             // Articles Dropdown
-            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Article', [
+            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i>' . trans('oa_menues.backend.sidebar.article'), [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
@@ -41,7 +41,7 @@ class GenerateMenus
             ]);
 
             // Submenu: Posts
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Posts', [
+            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> ' . trans('oa_menues.backend.sidebar.posts'), [
                 'route' => 'backend.posts.index',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -54,7 +54,7 @@ class GenerateMenus
                 'class' => "c-sidebar-nav-link",
             ]);
             // Submenu: Categories
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-sitemap"></i> Categories', [
+            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-sitemap"></i> ' . trans('oa_menues.backend.sidebar.categories'), [
                 'route' => 'backend.categories.index',
                 'class' => 'c-sidebar-nav-item',
             ])

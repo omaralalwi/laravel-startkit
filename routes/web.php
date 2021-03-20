@@ -20,16 +20,19 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], 
     function(){ //start Frontend LOCALIZED Routes
-
-    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     
     // frontend Routes
     require __DIR__.'/frontend.php';
 
 }); // colse Frontend LOCALIZED Routes
 
-// Atom/ RSS Feed Routes 
- //   Route::feeds();
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath'] 
+    ], function(){ //start Backend LOCALIZED Routes
+    // Atom/ RSS Feed Routes 
+    Route::feeds();
+});
 
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),

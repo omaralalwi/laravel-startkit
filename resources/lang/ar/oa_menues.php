@@ -1,7 +1,6 @@
 <?php
 
 /*  this is my own translation files
- * Eng: Omar Alalwi
  * find me in github: https://github.com/omaralwi
 */
 
@@ -31,12 +30,22 @@ return array (
 	'sidebar' => 
 	   array (
 	   
-		'' => '',
+		'dashboard' => 'لوحة التحكم',
 		'notifications' => 'الإشعارات',
-		'' => '',
-		'' => '',
-		'' => '',
-		'' => '',
+		'settings' => 'الإعدادات',
+		'backups' => 'النسخ الإحتياطي',
+		'access_control' => 'صلاحيات الوصول',
+		'users' => 'المستخدمين',
+		'roles' => 'الأدوار',
+		'log_viewer' => 'مستعرض السجل',
+		'logs_by_days' => 'السجل بالأيام',
+		'management' => 'الإدارة',
+		'modules' => 'الموديلز',
+		'article' => 'المقالات',
+		'posts' => 'المنشورات',
+		'categories' => 'التصنيفات',
+		'tags' => 'الوسوم',
+		'comments' => 'التعليقات',
 		'' => '',
 		'' => '',
 		'' => '',

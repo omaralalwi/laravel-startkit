@@ -8,7 +8,7 @@ laravel starter Template, to save your time when You start with new scalable Lar
 
 # Based on Laravel8.x
 
-![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl2.png)
+![backend-rtl2](https://amoori-web-app-resources.s3-ap-southeast-1.amazonaws.com/laravel-starter-template-screenshots/backend-rtl3.png)
 
 # Requirements
 
