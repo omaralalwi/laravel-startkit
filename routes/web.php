@@ -30,5 +30,6 @@ Route::group( //start LOCALIZED Routes
 // if you have not localized routes put them outside perviouse group, in the following section
 // not localized routes, puth them here
 
-    // Atom RSS Feed Routes 
-    Route::feeds();
+// Atom RSS Feed Routes , if you enable it you will facing XML file problem, it is issue in Atom RSS Feed Routes
+// I will fix it as soon as possible
+  //  Route::feeds();

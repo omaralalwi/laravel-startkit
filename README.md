@@ -112,7 +112,7 @@ Follow the steps mentioned below to install and run the project.
 6. Link storage directory: `php artisan storage:link`
 7. generate encryption key to app: `php artisan key:generate`
 8. You may create a virtualhost entry to access the application or run `php artisan serve` from the project root and visit `http://127.0.0.1:8000`
-9. Login to Admin Panel `localhost:8000/admin` Username: super@admin.com Password: secret
+9. Login to Admin Panel `localhost:8000/admin/dashboard` Username: super@admin.com Password: secret
 
 
 *After creating the new permissions use the following commands to update cashed permissions.*
