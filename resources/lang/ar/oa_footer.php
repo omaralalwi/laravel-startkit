@@ -4,8 +4,8 @@ return array (
 
 'copyright' => 'الحقوق',
 'rights_reserved' => 'جميع الحقوق محفوظة',
-'company_name' => 'هاكاثون سوفت',
-'company_activity' => 'لأمن المعلومات وخدمات الويب',
+'company_name' => 'إسم الشركة',
+'company_activity' => 'نشاط الشركة',
 
 'latest_products' => 'منتجات مميزة',
 

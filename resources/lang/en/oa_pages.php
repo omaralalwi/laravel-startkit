@@ -8,7 +8,7 @@ return array (
 
 'titles' => 
    array (
-    'site_name' => 'High Way',
+    'site_name' => 'Site Name',
 	'home' => 'Home',
 	'login' => 'Login',
 	'register' => 'Register',

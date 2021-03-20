@@ -18,7 +18,7 @@ class GenerateMenus
 
     public function handle($request, Closure $next)
     {
-    
+
         /* package for laravel menue
             * https://github.com/lavary/laravel-menu#installation
         */
@@ -38,7 +38,7 @@ class GenerateMenus
             ]);
 
             // Notifications
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Notifications', [
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i>' . trans('oa_menues.backend.sidebar.notifications') , [
                 'route' => 'backend.notifications.index',
                 'class' => 'c-sidebar-nav-item',
             ])

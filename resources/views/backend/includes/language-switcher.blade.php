@@ -1,6 +1,5 @@
 {{-- for multilingual implementation, it is best paractice for SEO --}}
 {{-- also it is best paractice for dynamic adding for locals  without needing to add them manually  --}}
-{{-- replaced with this way تم استبدال التي كانت افتراضية في الثيم بهذه عشان تتوافق مع الطريقة ا لجديدة اللي سويتها  --}}
 
     <li class="c-header-nav-item dropdown d-md-down-none mx-2">
             <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
