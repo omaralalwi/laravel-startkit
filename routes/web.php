@@ -11,7 +11,7 @@
 |
 */
 
-// Autho Routes
+// Auth Routes
 require __DIR__.'/auth.php';
 
 Route::group(
@@ -19,22 +19,24 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], 
-    function(){ //start LOCALIZED Routes
+    function(){ //start Frontend LOCALIZED Routes
 
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     
     // frontend Routes
     require __DIR__.'/frontend.php';
 
-}); // colse LOCALIZED Routes
+}); // colse Frontend LOCALIZED Routes
 
-// Atom/ RSS Feed Routes
-//Route::feeds();
+// Atom/ RSS Feed Routes 
+ //   Route::feeds();
 
-Route::group(['middleware' => 'SetLocaleForBackend' ], function(){ //start LOCALIZED Routes
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect','localeViewPath'] 
+    ], function(){ //start Backend LOCALIZED Routes
 
     // backend Routes
   require __DIR__.'/backend.php';
 
-}); // colse Route::group(['middleware'
-
+}); // colse Backend 

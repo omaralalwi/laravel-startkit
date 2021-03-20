@@ -7,8 +7,7 @@
 * --------------------------------------------------------------------
 */
 
-// translated Routes for translated models , this is for ackend it is different from Frontend
-	Route::resource('products', 'Backend\ProductsController');
+Route::resource('products', 'Backend\ProductsController');
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 

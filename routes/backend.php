@@ -9,9 +9,6 @@
 
 Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
 
-    // Language Switch for backend just
-    Route::get('language/{language}', 'LanguageController@switch')->name('language.switch');
-
     /**
      * Backend Dashboard
      * Namespaces indicate folder structure.
