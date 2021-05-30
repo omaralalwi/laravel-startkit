@@ -6,11 +6,12 @@
 *
 * --------------------------------------------------------------------
 */
+	
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
 		// Same thing for static pages like your about page
 	Route::view(trans('routes.about'), 'about')->name('page.about');
-
+	
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
