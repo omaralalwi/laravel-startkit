@@ -12,10 +12,10 @@
   ),
   'app' => 
   array (
-    'name' => 'laravel-starter-template',
-    'env' => 'local',
+    'name' => 'Laravel Starter Template',
+    'env' => 'production',
     'debug' => false,
-    'url' => 'http://localhost',
+    'url' => 'http://localhost:8000',
     'asset_url' => NULL,
     'timezone' => 'Asia/Riyadh',
     'locale' => 'en',
@@ -25,9 +25,9 @@
       'ar' => 'Arabic',
     ),
     'fallback_locale' => 'en',
-    'initial_username' => '100000',
+    'initial_username' => 100000,
     'faker_locale' => 'en_US',
-    'key' => 'base64:ltF6ZMaP+4z0wKnmvNsOMTuezfxmXAEJY2tIyNYZsLc=',
+    'key' => NULL,
     'cipher' => 'AES-256-CBC',
     'salt' => 'nGqhzPOVRpysbY5jlqe609e',
     'providers' => 
@@ -151,19 +151,19 @@
   array (
     'backup' => 
     array (
-      'name' => 'laravel-starter-template',
+      'name' => 'Laravel Starter Template',
       'source' => 
       array (
         'files' => 
         array (
           'include' => 
           array (
-            0 => 'C:\\wamp64\\www\\laravel-starter-template\\storage/app/public',
+            0 => '/home/omar/my_apps/laravel-startertkit/storage/app/public',
           ),
           'exclude' => 
           array (
-            0 => 'C:\\wamp64\\www\\laravel-starter-template\\vendor',
-            1 => 'C:\\wamp64\\www\\laravel-starter-template\\node_modules',
+            0 => '/home/omar/my_apps/laravel-startertkit/vendor',
+            1 => '/home/omar/my_apps/laravel-startertkit/node_modules',
           ),
           'follow_links' => false,
         ),
@@ -181,7 +181,7 @@
           0 => 'local',
         ),
       ),
-      'temporary_directory' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app/backup-temp',
+      'temporary_directory' => '/home/omar/my_apps/laravel-startertkit/storage/app/backup-temp',
     ),
     'notifications' => 
     array (
@@ -215,11 +215,11 @@
       'notifiable' => 'Spatie\\Backup\\Notifications\\Notifiable',
       'mail' => 
       array (
-        'to' => 'you@example.com',
+        'to' => 'hello@example.com',
         'from' => 
         array (
-          'address' => NULL,
-          'name' => 'laravel-starter-template',
+          'address' => 'hello@example.com',
+          'name' => 'Example',
         ),
       ),
       'slack' => 
@@ -234,7 +234,7 @@
     array (
       0 => 
       array (
-        'name' => 'laravel-starter-template',
+        'name' => 'laravel-backup',
         'disks' => 
         array (
           0 => 'local',
@@ -269,18 +269,18 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'log',
+    'default' => 'null',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '',
-        'secret' => '',
-        'app_id' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'app_id' => NULL,
         'options' => 
         array (
-          'cluster' => 'mt1',
+          'cluster' => NULL,
           'useTLS' => true,
         ),
       ),
@@ -321,7 +321,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\framework/cache/data',
+        'path' => '/home/omar/my_apps/laravel-startertkit/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -353,14 +353,14 @@
       'dynamodb' => 
       array (
         'driver' => 'dynamodb',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'region' => 'us-east-1',
         'table' => 'cache',
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'laravel_starter_template_cache',
+    'prefix' => 'laravel_cache',
   ),
   'comment' => 
   array (
@@ -400,7 +400,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'laravel-starter-template-db',
+        'database' => '/home/omar/my_apps/laravel-startertkit/database/database.sqlite',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -410,9 +410,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel-starter-template-db',
-        'username' => 'root',
-        'password' => '12345678',
+        'database' => 'forge',
+        'username' => 'forge',
+        'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
@@ -429,10 +429,10 @@
         'driver' => 'pgsql',
         'url' => NULL,
         'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'laravel-starter-template-db',
-        'username' => 'root',
-        'password' => '12345678',
+        'port' => '5432',
+        'database' => 'forge',
+        'username' => 'forge',
+        'password' => '',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => '',
@@ -444,11 +444,11 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'laravel-starter-template-db',
-        'username' => 'root',
-        'password' => '12345678',
+        'host' => 'localhost',
+        'port' => '1433',
+        'database' => 'forge',
+        'username' => 'forge',
+        'password' => '',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => '',
@@ -462,7 +462,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_starter_template_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
@@ -612,7 +612,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\debugbar',
+      'path' => '/home/omar/my_apps/laravel-startertkit/storage/debugbar',
       'connection' => NULL,
       'provider' => '',
     ),
@@ -793,7 +793,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\framework/laravel-excel',
+      'local_path' => '/home/omar/my_apps/laravel-startertkit/storage/framework/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -865,36 +865,36 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app',
+        'root' => '/home/omar/my_apps/laravel-startertkit/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'root' => '/home/omar/my_apps/laravel-startertkit/storage/app/public',
+        'url' => '/storage',
         'visibility' => 'public',
       ),
       'images' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app/public/images',
+        'root' => '/home/omar/my_apps/laravel-startertkit/storage/app/public/images',
         'url' => '/storage/images',
         'visibility' => 'public',
       ),
       'files' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app/public/files',
+        'root' => '/home/omar/my_apps/laravel-startertkit/storage/app/public/files',
         'url' => '/storage/files',
         'visibility' => 'public',
       ),
       's3' => 
       array (
         'driver' => 's3',
-        'key' => '',
-        'secret' => '',
-        'region' => 'us-east-1',
-        'bucket' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'region' => NULL,
+        'bucket' => NULL,
         'url' => NULL,
       ),
     ),
@@ -991,8 +991,8 @@
     'route' => NULL,
     'paths' => 
     array (
-      0 => 'C:\\wamp64\\www\\laravel-starter-template\\public\\upload',
-      1 => 'C:\\wamp64\\www\\laravel-starter-template\\public\\images',
+      0 => '/home/omar/my_apps/laravel-startertkit/public/upload',
+      1 => '/home/omar/my_apps/laravel-startertkit/public/images',
     ),
     'templates' => 
     array (
@@ -1017,26 +1017,26 @@
     array (
       'path' => 
       array (
-        'migration' => 'C:\\wamp64\\www\\laravel-starter-template\\database\\migrations/',
-        'model' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Models/',
-        'datatables' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\DataTables/',
-        'repository' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Repositories/',
-        'routes' => 'C:\\wamp64\\www\\laravel-starter-template\\routes/web.php',
-        'api_routes' => 'C:\\wamp64\\www\\laravel-starter-template\\routes/api.php',
-        'request' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Http/Requests/',
-        'api_request' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Http/Requests/API/',
-        'controller' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Http/Controllers/',
-        'api_controller' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Http/Controllers/API/',
-        'repository_test' => 'C:\\wamp64\\www\\laravel-starter-template\\tests/Repositories/',
-        'api_test' => 'C:\\wamp64\\www\\laravel-starter-template\\tests/APIs/',
-        'tests' => 'C:\\wamp64\\www\\laravel-starter-template\\tests/',
-        'views' => 'C:\\wamp64\\www\\laravel-starter-template\\resources\\views/',
-        'schema_files' => 'C:\\wamp64\\www\\laravel-starter-template\\resources\\model_schemas/',
-        'templates_dir' => 'C:\\wamp64\\www\\laravel-starter-template\\resources\\infyom/infyom-generator-templates/',
-        'seeder' => 'C:\\wamp64\\www\\laravel-starter-template\\database\\seeders/',
-        'database_seeder' => 'C:\\wamp64\\www\\laravel-starter-template\\database\\seeders/DatabaseSeeder.php',
-        'factory' => 'C:\\wamp64\\www\\laravel-starter-template\\database\\factories/',
-        'view_provider' => 'C:\\wamp64\\www\\laravel-starter-template\\app\\Providers/ViewServiceProvider.php',
+        'migration' => '/home/omar/my_apps/laravel-startertkit/database/migrations/',
+        'model' => '/home/omar/my_apps/laravel-startertkit/app/Models/',
+        'datatables' => '/home/omar/my_apps/laravel-startertkit/app/DataTables/',
+        'repository' => '/home/omar/my_apps/laravel-startertkit/app/Repositories/',
+        'routes' => '/home/omar/my_apps/laravel-startertkit/routes/web.php',
+        'api_routes' => '/home/omar/my_apps/laravel-startertkit/routes/api.php',
+        'request' => '/home/omar/my_apps/laravel-startertkit/app/Http/Requests/',
+        'api_request' => '/home/omar/my_apps/laravel-startertkit/app/Http/Requests/API/',
+        'controller' => '/home/omar/my_apps/laravel-startertkit/app/Http/Controllers/',
+        'api_controller' => '/home/omar/my_apps/laravel-startertkit/app/Http/Controllers/API/',
+        'repository_test' => '/home/omar/my_apps/laravel-startertkit/tests/Repositories/',
+        'api_test' => '/home/omar/my_apps/laravel-startertkit/tests/APIs/',
+        'tests' => '/home/omar/my_apps/laravel-startertkit/tests/',
+        'views' => '/home/omar/my_apps/laravel-startertkit/resources/views/',
+        'schema_files' => '/home/omar/my_apps/laravel-startertkit/resources/model_schemas/',
+        'templates_dir' => '/home/omar/my_apps/laravel-startertkit/resources/infyom/infyom-generator-templates/',
+        'seeder' => '/home/omar/my_apps/laravel-startertkit/database/seeders/',
+        'database_seeder' => '/home/omar/my_apps/laravel-startertkit/database/seeders/DatabaseSeeder.php',
+        'factory' => '/home/omar/my_apps/laravel-startertkit/database/factories/',
+        'view_provider' => '/home/omar/my_apps/laravel-startertkit/app/Providers/ViewServiceProvider.php',
       ),
       'namespace' => 
       array (
@@ -1166,7 +1166,7 @@
   ),
   'log-viewer' => 
   array (
-    'storage-path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\logs',
+    'storage-path' => '/home/omar/my_apps/laravel-startertkit/storage/logs',
     'pattern' => 
     array (
       'prefix' => 'laravel-',
@@ -1251,13 +1251,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\logs/laravel.log',
+        'path' => '/home/omar/my_apps/laravel-startertkit/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\logs/laravel.log',
+        'path' => '/home/omar/my_apps/laravel-startertkit/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -1307,7 +1307,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\logs/laravel.log',
+        'path' => '/home/omar/my_apps/laravel-startertkit/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -1319,9 +1319,9 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.mailtrap.io',
-        'port' => '2525',
-        'encryption' => NULL,
+        'host' => 'smtp.mailgun.org',
+        'port' => 587,
+        'encryption' => 'tls',
         'username' => NULL,
         'password' => NULL,
       ),
@@ -1354,15 +1354,15 @@
     ),
     'from' => 
     array (
-      'address' => NULL,
-      'name' => 'laravel-starter-template',
+      'address' => 'hello@example.com',
+      'name' => 'Example',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\wamp64\\www\\laravel-starter-template\\resources\\views/vendor/mail',
+        0 => '/home/omar/my_apps/laravel-startertkit/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -1448,7 +1448,7 @@
     'stubs' => 
     array (
       'enabled' => false,
-      'path' => 'C:\\wamp64\\www\\laravel-starter-template/vendor/nwidart/laravel-modules/src/Commands/stubs',
+      'path' => '/home/omar/my_apps/laravel-startertkit/vendor/nwidart/laravel-modules/src/Commands/stubs',
       'files' => 
       array (
         'routes/web' => 'Routes/web.php',
@@ -1512,9 +1512,9 @@
     ),
     'paths' => 
     array (
-      'modules' => 'C:\\wamp64\\www\\laravel-starter-template\\Modules',
-      'assets' => 'C:\\wamp64\\www\\laravel-starter-template\\public\\modules',
-      'migration' => 'C:\\wamp64\\www\\laravel-starter-template\\database/migrations',
+      'modules' => '/home/omar/my_apps/laravel-startertkit/Modules',
+      'assets' => '/home/omar/my_apps/laravel-startertkit/public/modules',
+      'migration' => '/home/omar/my_apps/laravel-startertkit/database/migrations',
       'generator' => 
       array (
         'config' => 
@@ -1693,7 +1693,7 @@
       'enabled' => false,
       'paths' => 
       array (
-        0 => 'C:\\wamp64\\www\\laravel-starter-template\\vendor/*/*',
+        0 => '/home/omar/my_apps/laravel-startertkit/vendor/*/*',
       ),
     ),
     'composer' => 
@@ -1722,7 +1722,7 @@
       'file' => 
       array (
         'class' => 'Nwidart\\Modules\\Activators\\FileActivator',
-        'statuses-file' => 'C:\\wamp64\\www\\laravel-starter-template\\modules_statuses.json',
+        'statuses-file' => '/home/omar/my_apps/laravel-startertkit/modules_statuses.json',
         'cache-key' => 'activator.installed',
         'cache-lifetime' => 604800,
       ),
@@ -1781,7 +1781,7 @@
   array (
     'encoding' => 'UTF-8',
     'finalize' => true,
-    'cachePath' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\app/purifier',
+    'cachePath' => '/home/omar/my_apps/laravel-startertkit/storage/app/purifier',
     'cacheFileMode' => 493,
     'settings' => 
     array (
@@ -2069,8 +2069,8 @@
       'sqs' => 
       array (
         'driver' => 'sqs',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
         'queue' => 'your-queue-name',
         'region' => 'us-east-1',
@@ -2105,30 +2105,30 @@
     ),
     'ses' => 
     array (
-      'key' => '',
-      'secret' => '',
+      'key' => NULL,
+      'secret' => NULL,
       'region' => 'us-east-1',
     ),
     'github' => 
     array (
-      'client_id' => '',
-      'client_secret' => '',
-      'redirect' => 'http://laravel-starter-template.local/login/github/callback',
+      'client_id' => NULL,
+      'client_secret' => NULL,
+      'redirect' => NULL,
     ),
     'google' => 
     array (
-      'client_id' => '',
-      'client_secret' => '',
-      'redirect' => 'http://laravel-starter-template.local/login/google/callback',
+      'client_id' => NULL,
+      'client_secret' => NULL,
+      'redirect' => NULL,
     ),
   ),
   'session' => 
   array (
     'driver' => 'file',
-    'lifetime' => '120',
+    'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\framework/sessions',
+    'files' => '/home/omar/my_apps/laravel-startertkit/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -2137,7 +2137,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_starter_template_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -2408,9 +2408,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\wamp64\\www\\laravel-starter-template\\resources\\views',
+      0 => '/home/omar/my_apps/laravel-startertkit/resources/views',
     ),
-    'compiled' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\framework\\views',
+    'compiled' => '/home/omar/my_apps/laravel-startertkit/storage/framework/views',
   ),
   'dompdf' => 
   array (
@@ -2418,10 +2418,10 @@
     'orientation' => 'portrait',
     'defines' => 
     array (
-      'font_dir' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\fonts/',
-      'font_cache' => 'C:\\wamp64\\www\\laravel-starter-template\\storage\\fonts/',
-      'temp_dir' => 'C:\\Users\\amori\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\wamp64\\www\\laravel-starter-template',
+      'font_dir' => '/home/omar/my_apps/laravel-startertkit/storage/fonts/',
+      'font_cache' => '/home/omar/my_apps/laravel-startertkit/storage/fonts/',
+      'temp_dir' => '/tmp',
+      'chroot' => '/home/omar/my_apps/laravel-startertkit',
       'enable_font_subsetting' => false,
       'pdf_backend' => 'CPDF',
       'default_media_type' => 'screen',
@@ -2481,6 +2481,18 @@
           'SWIFT' => 'BANK101',
         ),
       ),
+    ),
+  ),
+  'fractal' => 
+  array (
+    'default_serializer' => '',
+    'default_paginator' => '',
+    'base_url' => NULL,
+    'fractal_class' => 'Spatie\\Fractal\\Fractal',
+    'auto_includes' => 
+    array (
+      'enabled' => true,
+      'request_key' => 'include',
     ),
   ),
 );

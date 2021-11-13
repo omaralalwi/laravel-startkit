@@ -37,6 +37,7 @@
         "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-backup": "^6.11",
         "spatie/laravel-feed": "^2.7",
+        "spatie/laravel-fractal": "^5.8",
         "spatie/laravel-html": "^2.28",
         "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-permission": "^3.17",

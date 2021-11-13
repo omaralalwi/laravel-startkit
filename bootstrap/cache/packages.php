@@ -295,6 +295,17 @@
       0 => 'Spatie\\Feed\\FeedServiceProvider',
     ),
   ),
+  'spatie/laravel-fractal' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Fractal\\FractalServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Fractal' => 'Spatie\\Fractal\\FractalFacade',
+    ),
+  ),
   'spatie/laravel-html' => 
   array (
     'providers' => 

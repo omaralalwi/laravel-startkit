@@ -109,6 +109,7 @@ It is a modular application, and a number of modules are installed by default. I
 * with Spatie Media Library and conversitions
 * with [Yajra DataTables](https://github.com/yajra/laravel-datatables)
 * with [infyom Laravel Generator](https://github.com/InfyOmLabs/laravel-generator)
+* with [laravel fractal](https://github.com/spatie/laravel-fractal) for build API.
 * All Stubs are ready to customize
 * Notifications for Admin
 
