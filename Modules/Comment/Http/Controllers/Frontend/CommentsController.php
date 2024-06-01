@@ -5,10 +5,10 @@ namespace Modules\Comment\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Auth;
 use Flash;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\View\View;
 use Log;
 use Modules\Comment\Http\Requests\Frontend\CommentsRequest;
 use Modules\Comment\Notifications\NewCommentAdded;
@@ -32,10 +32,8 @@ class CommentsController extends Controller
 
     /**
      * Display a listing of the resource.
-     *
-     * @return Response
      */
-    public function index()
+    public function index(): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -55,12 +53,8 @@ class CommentsController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function show($id)
+    public function show(int $id): View
     {
         $id = decode_id($id);
 
@@ -74,7 +68,7 @@ class CommentsController extends Controller
 
         $$module_name_singular = $module_model::whereId($id)->published()->first();
 
-        if (!$$module_name_singular) {
+        if (! $$module_name_singular) {
             abort(404);
         }
 
@@ -86,12 +80,8 @@ class CommentsController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     *
-     * @return Response
      */
-    public function store(CommentsRequest $request)
+    public function store(CommentsRequest $request): RedirectResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -107,7 +97,7 @@ class CommentsController extends Controller
             'user_id' => (isset($request->user_id)) ? decode_id($request->user_id) : null,
             'parent_id' => (isset($request->parent_id)) ? decode_id($request->parent_id) : null,
         ];
-        
+
         if (isset($request->post_id)) {
             $commentable_id = decode_id($request->post_id);
 

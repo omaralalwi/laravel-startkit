@@ -17,18 +17,16 @@ class TagFactory extends Factory
 
     /**
      * Define the model's default state.
-     *
-     * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'name'              => $this->faker->sentence(2),
-            'slug'              => '',
-            'description'       => $this->faker->paragraph,
-            'status'            => 1,
-            'created_at'        => Carbon::now(),
-            'updated_at'        => Carbon::now(),
+            'name' => $this->faker->sentence(2),
+            'slug' => '',
+            'description' => $this->faker->paragraph(),
+            'status' => 1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ];
     }
 }

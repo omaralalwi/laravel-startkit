@@ -9,10 +9,8 @@ class CommentServiceProvider extends ServiceProvider
 {
     /**
      * Boot the application events.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->registerTranslations();
         $this->registerConfig();
@@ -29,20 +27,16 @@ class CommentServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->register(RouteServiceProvider::class);
     }
 
     /**
      * Register config.
-     *
-     * @return void
      */
-    protected function registerConfig()
+    protected function registerConfig(): void
     {
         $this->publishes([
             module_path('Comment', 'Config/config.php') => config_path('comment.php'),
@@ -55,30 +49,26 @@ class CommentServiceProvider extends ServiceProvider
 
     /**
      * Register views.
-     *
-     * @return void
      */
-    public function registerViews()
+    public function registerViews(): void
     {
         $viewPath = resource_path('views/modules/comment');
 
         $sourcePath = module_path('Comment', 'Resources/views');
 
         $this->publishes([
-            $sourcePath => $viewPath
+            $sourcePath => $viewPath,
         ], 'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/comment';
+            return $path.'/modules/comment';
         }, \Config::get('view.paths')), [$sourcePath]), 'comment');
     }
 
     /**
      * Register translations.
-     *
-     * @return void
      */
-    public function registerTranslations()
+    public function registerTranslations(): void
     {
         $langPath = resource_path('lang/modules/comment');
 
@@ -91,10 +81,8 @@ class CommentServiceProvider extends ServiceProvider
 
     /**
      * Register commands.
-     *
-     * @param string $namespace
      */
-    protected function registerCommands($namespace = '')
+    protected function registerCommands(string $namespace = '')
     {
         $finder = new Finder(); // from Symfony\Component\Finder;
         $finder->files()->name('*.php')->in(__DIR__.'/../Console');
@@ -110,10 +98,8 @@ class CommentServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
-     *
-     * @return array
      */
-    public function provides()
+    public function provides(): array
     {
         return [];
     }

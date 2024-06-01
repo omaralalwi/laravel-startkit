@@ -7,10 +7,13 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Carbon\Carbon;
 use Flash;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\View\View;
 use Log;
 use Modules\Comment\Http\Requests\Backend\CommentsRequest;
 use Modules\Comment\Notifications\NewCommentAdded;
@@ -38,10 +41,8 @@ class CommentsController extends Controller
 
     /**
      * Display a listing of the resource.
-     *
-     * @return Response
      */
-    public function index()
+    public function index(): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -63,10 +64,8 @@ class CommentsController extends Controller
 
     /**
      * Select Options for Select 2 Request/ Response.
-     *
-     * @return Response
      */
-    public function index_list(Request $request)
+    public function index_list(Request $request): JsonResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -88,7 +87,7 @@ class CommentsController extends Controller
 
         foreach ($query_data as $row) {
             $$module_name[] = [
-                'id'   => $row->id,
+                'id' => $row->id,
                 'text' => $row->name.' (Code: '.$row->slug.')',
             ];
         }
@@ -111,39 +110,37 @@ class CommentsController extends Controller
         $data = $$module_name;
 
         return Datatables::of($$module_name)
-                        ->addColumn('action', function ($data) {
-                            $module_name = $this->module_name;
+            ->addColumn('action', function ($data) {
+                $module_name = $this->module_name;
 
-                            return view('backend.includes.action_column', compact('module_name', 'data'));
-                        })
+                return view('backend.includes.action_column', compact('module_name', 'data'));
+            })
                         // ->editColumn('name', '<strong>{{$name}}</strong> | {{$status_formatted}}')
-                        ->editColumn('name', function ($data) {
-                            $return_string = '<strong>'.$data->name.'</strong> | '.$data->status_formatted;
+            ->editColumn('name', function ($data) {
+                $return_string = '<strong>'.$data->name.'</strong> | '.$data->status_formatted;
 
-                            return $return_string;
-                        })
-                        ->editColumn('updated_at', function ($data) {
-                            $module_name = $this->module_name;
+                return $return_string;
+            })
+            ->editColumn('updated_at', function ($data) {
+                $module_name = $this->module_name;
 
-                            $diff = Carbon::now()->diffInHours($data->updated_at);
+                $diff = Carbon::now()->diffInHours($data->updated_at);
 
-                            if ($diff < 25) {
-                                return $data->updated_at->diffForHumans();
-                            } else {
-                                return $data->updated_at->isoFormat('LLLL');
-                            }
-                        })
-                        ->rawColumns(['name', 'action'])
-                        ->orderColumns(['id'], '-:column $1')
-                        ->make(true);
+                if ($diff < 25) {
+                    return $data->updated_at->diffForHumans();
+                } else {
+                    return $data->updated_at->isoFormat('LLLL');
+                }
+            })
+            ->rawColumns(['name', 'action'])
+            ->orderColumns(['id'], '-:column $1')
+            ->make(true);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return Response
      */
-    public function create()
+    public function create(): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -163,12 +160,8 @@ class CommentsController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     *
-     * @return Response
      */
-    public function store(CommentsRequest $request)
+    public function store(CommentsRequest $request): RedirectResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -191,12 +184,8 @@ class CommentsController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function show($id)
+    public function show(int $id): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -209,10 +198,10 @@ class CommentsController extends Controller
         $$module_name_singular = $module_model::findOrFail($id);
 
         $activities = Activity::where('subject_type', '=', $module_model)
-                                ->where('log_name', '=', $module_name)
-                                ->where('subject_id', '=', $id)
-                                ->latest()
-                                ->paginate();
+            ->where('log_name', '=', $module_name)
+            ->where('subject_id', '=', $id)
+            ->latest()
+            ->paginate();
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
 
@@ -224,12 +213,8 @@ class CommentsController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function edit($id)
+    public function edit(int $id): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -251,13 +236,8 @@ class CommentsController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int     $id
-     *
-     * @return Response
      */
-    public function update(CommentsRequest $request, $id)
+    public function update(CommentsRequest $request, int $id): RedirectResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -280,12 +260,8 @@ class CommentsController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function destroy($id)
+    public function destroy(int $id): RedirectResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -309,10 +285,8 @@ class CommentsController extends Controller
     /**
      * List of trashed ertries
      * works if the softdelete is enabled.
-     *
-     * @return Response
      */
-    public function trashed()
+    public function trashed(): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -335,12 +309,9 @@ class CommentsController extends Controller
     /**
      * Restore a soft deleted entry.
      *
-     * @param Request $request
-     * @param int     $id
-     *
-     * @return Response
+     * @param  Request  $request
      */
-    public function restore($id)
+    public function restore(int $id): RedirectResponse
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;

@@ -10,10 +10,8 @@ class TagDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         // Disable foreign key checks!
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
