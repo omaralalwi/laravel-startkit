@@ -36,11 +36,14 @@ return [
      |  Theme
      | -----------------------------------------------------------------
      |  Supported themes :
-     |    'bootstrap-3', 'bootstrap-4'
-     |  Make your own theme by adding a folder to the views directory and specifying it here.
+     |    'bootstrap-5'
+     |    'bootstrap-4'
+     |    'bootstrap-3'
+     |
+     |  You can make your own theme by adding a folder to the views directory and specifying it here.
      */
 
-    'theme'         => 'laravel-starter',
+    'theme'         => 'bootstrap-5',
 
     /* -----------------------------------------------------------------
      |  Route settings
@@ -51,14 +54,12 @@ return [
         'enabled'    => true,
 
         'attributes' => [
-            'prefix'     => 'admin/log-viewer',
-            'middleware' => ['web', 'auth', 'permission:view_logs'],
+            'prefix'     => 'log-viewer',
+
+            'middleware' => env('ARCANEDEV_LOGVIEWER_MIDDLEWARE') ? explode(',', env('ARCANEDEV_LOGVIEWER_MIDDLEWARE')) : null,
         ],
-        // 'attributes' => [
-        //     'prefix'     => 'log-viewer',
-        //
-        //     'middleware' => env('ARCANEDEV_LOGVIEWER_MIDDLEWARE') ? explode(',', env('ARCANEDEV_LOGVIEWER_MIDDLEWARE')) : null,
-        // ],
+
+        'show' => 'log-viewer::logs.show',
     ],
 
     /* -----------------------------------------------------------------
@@ -96,7 +97,7 @@ return [
      | -----------------------------------------------------------------
      */
 
-    'icons' => [
+    'icons' =>  [
         /**
          * Font awesome >= 4.3
          * http://fontawesome.io/icons/
@@ -117,7 +118,7 @@ return [
      | -----------------------------------------------------------------
      */
 
-    'colors' => [
+    'colors' =>  [
         'levels'    => [
             'empty'     => '#D1D1D1',
             'all'       => '#8A8A8A',

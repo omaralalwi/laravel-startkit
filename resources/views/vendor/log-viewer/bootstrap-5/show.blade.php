@@ -1,12 +1,12 @@
 <?php
 /**
- * @var  Arcanedev\LogViewer\Entities\Log                                                                     $log
- * @var  Illuminate\Pagination\LengthAwarePaginator|array<string|int, Arcanedev\LogViewer\Entities\LogEntry>  $entries
- * @var  string|null                                                                                          $query
+ * @var  Arcanedev\LogViewer\Entities\Log            $log
+ * @var  Illuminate\Pagination\LengthAwarePaginator  $entries
+ * @var  string|null                                 $query
  */
 ?>
 
-@extends('log-viewer::bootstrap-4._master')
+@extends('log-viewer::bootstrap-5._master')
 
 @section('content')
     <div class="page-header mb-4">
@@ -44,9 +44,9 @@
                         <a href="{{ route('log-viewer::logs.download', [$log->date]) }}" class="btn btn-sm btn-success">
                             <i class="fa fa-download"></i> @lang('Download')
                         </a>
-                        <a href="#delete-log-modal" class="btn btn-sm btn-danger" data-toggle="modal">
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#delete-log-modal">
                             <i class="fa fa-trash-o"></i> @lang('Delete')
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -59,19 +59,19 @@
                             <tr>
                                 <td>@lang('Log entries') :</td>
                                 <td>
-                                    <span class="badge badge-primary">{{ $entries->total() }}</span>
+                                    <span class="badge text-bg-primary">{{ $entries->total() }}</span>
                                 </td>
                                 <td>@lang('Size') :</td>
                                 <td>
-                                    <span class="badge badge-primary">{{ $log->size() }}</span>
+                                    <span class="badge text-bg-primary">{{ $log->size() }}</span>
                                 </td>
                                 <td>@lang('Created at') :</td>
                                 <td>
-                                    <span class="badge badge-primary">{{ $log->createdAt() }}</span>
+                                    <span class="badge text-bg-primary">{{ $log->createdAt() }}</span>
                                 </td>
                                 <td>@lang('Updated at') :</td>
                                 <td>
-                                    <span class="badge badge-primary">{{ $log->updatedAt() }}</span>
+                                    <span class="badge text-bg-primary">{{ $log->updatedAt() }}</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -82,17 +82,15 @@
                     <form action="{{ route('log-viewer::logs.search', [$log->date, $level]) }}" method="GET">
                         <div class="form-group">
                             <div class="input-group">
-                                <input id="query" name="query" class="form-control" value="{{ $query }}" placeholder="@lang('Type here to search')">
-                                <div class="input-group-append">
-                                    @unless (is_null($query))
-                                        <a href="{{ route('log-viewer::logs.show', [$log->date]) }}" class="btn btn-secondary">
-                                            (@lang(':count results', ['count' => $entries->count()])) <i class="fa fa-fw fa-times"></i>
-                                        </a>
-                                    @endunless
-                                    <button id="search-btn" class="btn btn-primary">
-                                        <span class="fa fa-fw fa-search"></span>
-                                    </button>
-                                </div>
+                                <input type="search" id="query" name="query" class="form-control" value="{{ $query }}" placeholder="@lang('Type here to search')">
+                                @unless (is_null($query))
+                                    <a href="{{ route('log-viewer::logs.show', [$log->date]) }}" class="btn btn-light">
+                                        (@lang(':count results', ['count' => $entries->count()])) <i class="fa fa-fw fa-times"></i>
+                                    </a>
+                                @endunless
+                                <button id="search-btn" class="btn btn-primary">
+                                    <span class="fa fa-fw fa-search"></span>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -103,7 +101,7 @@
             <div class="card mb-4">
                 @if ($entries->hasPages())
                     <div class="card-header">
-                        <span class="badge badge-info float-right">
+                        <span class="badge text-bg-info float-right">
                             {{ __('Page :current of :last', ['current' => $entries->currentPage(), 'last' => $entries->lastPage()]) }}
                         </span>
                     </div>
@@ -117,11 +115,12 @@
                                 <th style="width: 120px;">@lang('Level')</th>
                                 <th style="width: 65px;">@lang('Time')</th>
                                 <th>@lang('Header')</th>
-                                <th class="text-right">@lang('Actions')</th>
+                                <th class="text-end">@lang('Actions')</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($entries as $key => $entry)
+                                <?php /** @var  Arcanedev\LogViewer\Entities\LogEntry  $entry */ ?>
                                 <tr>
                                     <td>
                                         <span class="badge badge-env">{{ $entry->env }}</span>
@@ -132,23 +131,23 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <span class="badge badge-secondary">
+                                        <span class="badge text-bg-secondary">
                                             {{ $entry->datetime->format('H:i:s') }}
                                         </span>
                                     </td>
                                     <td>
                                         {{ $entry->header }}
                                     </td>
-                                    <td class="text-right">
+                                    <td class="text-end">
                                         @if ($entry->hasStack())
-                                        <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
+                                        <a class="btn btn-sm btn-light" role="button" data-bs-toggle="collapse"
                                            href="#log-stack-{{ $key }}" aria-expanded="false" aria-controls="log-stack-{{ $key }}">
                                             <i class="fa fa-toggle-on"></i> @lang('Stack')
                                         </a>
                                         @endif
 
                                         @if ($entry->hasContext())
-                                        <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
+                                        <a class="btn btn-sm btn-light" role="button" data-bs-toggle="collapse"
                                            href="#log-context-{{ $key }}" aria-expanded="false" aria-controls="log-context-{{ $key }}">
                                             <i class="fa fa-toggle-on"></i> @lang('Context')
                                         </a>
@@ -175,7 +174,7 @@
                             @empty
                                 <tr>
                                     <td colspan="5" class="text-center">
-                                        <span class="badge badge-secondary">@lang('The list of logs is empty!')</span>
+                                        <span class="badge text-bg-secondary">@lang('The list of logs is empty!')</span>
                                     </td>
                                 </tr>
                             @endforelse
@@ -191,24 +190,22 @@
 
 @section('modals')
     {{-- DELETE MODAL --}}
-    <div id="delete-log-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="delete-log-modal" tabindex="-1" aria-labelledby="delete-log-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
             <form id="delete-log-form" action="{{ route('log-viewer::logs.delete') }}" method="POST">
-                <input type="hidden" name="_method" value="DELETE">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
                 <input type="hidden" name="date" value="{{ $log->date }}">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">@lang('Delete log file')</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <h5 class="modal-title fs-5" id="delete-log-modal-label">@lang('Delete log file')</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <p>@lang('Are you sure you want to delete this log file: :date ?', ['date' => $log->date])</p>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary mr-auto" data-dismiss="modal">@lang('Cancel')</button>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-sm btn-light" data-bs-dismiss="modal">@lang('Cancel')</button>
                         <button type="submit" class="btn btn-sm btn-danger" data-loading-text="@lang('Loading')&hellip;">@lang('Delete')</button>
                     </div>
                 </div>
@@ -219,39 +216,43 @@
 
 @section('scripts')
     <script>
-        $(function () {
-            var deleteLogModal = $('div#delete-log-modal'),
-                deleteLogForm  = $('form#delete-log-form'),
-                submitBtn      = deleteLogForm.find('button[type=submit]');
+        ready(() => {
+            let deleteLogModal = new bootstrap.Modal('div#delete-log-modal')
+            let deleteLogForm = document.querySelector('form#delete-log-form')
+            let submitBtn = new bootstrap.Button(deleteLogForm.querySelector('button[type=submit]'))
 
-            deleteLogForm.on('submit', function(event) {
-                event.preventDefault();
-                submitBtn.button('loading');
+            deleteLogForm.addEventListener('submit', (event) => {
+                event.preventDefault()
+                submitBtn.toggle('loading')
 
-                $.ajax({
-                    url:      $(this).attr('action'),
-                    type:     $(this).attr('method'),
-                    dataType: 'json',
-                    data:     $(this).serialize(),
-                    success: function(data) {
-                        submitBtn.button('reset');
-                        if (data.result === 'success') {
-                            deleteLogModal.modal('hide');
+                fetch(event.currentTarget.getAttribute('action'), {
+                    method: 'DELETE',
+                    headers: {
+                        "X-Requested-With": "XMLHttpRequest",
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        date: event.currentTarget.querySelector("input[name='date']").value,
+                    })
+                })
+                    .then((resp) => resp.json())
+                    .then((resp) => {
+                        if (resp.result === 'success') {
+                            deleteLogModal.hide();
                             location.replace("{{ route('log-viewer::logs.list') }}");
                         }
                         else {
-                            alert('OOPS ! This is a lack of coffee exception !')
+                            alert('AJAX ERROR ! Check the console !')
+                            console.error(resp)
                         }
-                    },
-                    error: function(xhr, textStatus, errorThrown) {
-                        alert('AJAX ERROR ! Check the console !');
-                        console.error(errorThrown);
-                        submitBtn.button('reset');
-                    }
-                });
+                    })
+                    .catch((err) => {
+                        alert('AJAX ERROR ! Check the console !')
+                        console.error(err)
+                    })
 
-                return false;
-            });
+                return false
+            })
 
             @unless (empty(log_styler()->toHighlight()))
                 @php
@@ -260,13 +261,10 @@
                         : join(log_styler()->toHighlight(), '|');
                 @endphp
 
-                $('.stack-content').each(function() {
-                    var $this = $(this);
-                    var html = $this.html().trim()
-                        .replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>');
-
-                    $this.html(html);
-                });
+                document.querySelectorAll('.stack-content').forEach((elt) => {
+                    elt.innerHTML = elt.innerHTML.trim()
+                        .replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>')
+                })
             @endunless
         });
     </script>
