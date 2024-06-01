@@ -12,7 +12,9 @@
         "guzzlehttp/guzzle": "^7.8",
         "hashids/hashids": "^5.0",
         "kreait/laravel-firebase": "^5.8",
+        "laracasts/flash": "^3.2",
         "laravel/framework": "^11.9",
+        "laravel/socialite": "^5.14",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
