@@ -5,36 +5,43 @@ namespace Modules\Comment\Entities;
 use App\Models\BaseModel;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Comment\Entities\Presenters\CommentPresenter;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 class Comment extends BaseModel
 {
-    use HasFactory, LogsActivity, CommentPresenter, SoftDeletes;
+    use CommentPresenter, HasFactory, LogsActivity, SoftDeletes;
 
     protected $table = 'comments';
 
     protected static $logName = 'comments';
+
     protected static $logOnlyDirty = true;
+
     protected static $logAttributes = ['parent_id', 'user_id', 'name', 'comment', 'published_at', 'moderated_at', 'moderated_by', 'status'];
 
-    protected $dates = [
-        'deleted_at',
-        'published_at',
-        'moderated_at',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'published_at' => 'datetime',
+            'moderated_at' => 'datetime',
+        ];
+    }
 
     /**
      * Get the owning commentable model.
      */
-    public function commentable()
+    public function commentable(): MorphTo
     {
         return $this->morphTo();
     }
 
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo('App\Models\User');
     }
@@ -53,11 +60,11 @@ class Comment extends BaseModel
         if ($this->commentable_type == 'Modules\Article\Entities\Post') {
             return 'posts';
         } else {
-            return "";
+            return '';
         }
     }
 
-    public function parent()
+    public function parent(): BelongsTo
     {
         return $this->belongsTo('Modules\Comment\Entities\Comment', 'parent_id');
     }
@@ -107,36 +114,32 @@ class Comment extends BaseModel
      * Get the list of Published Articles.
      *
      * @param [type] $query [description]
-     *
      * @return [type] [description]
      */
     public function scopePublished($query)
     {
         return $query->where('status', '=', '1')
-                        ->whereDate('published_at', '<=', Carbon::today()
-                        ->toDateString());
+            ->whereDate('published_at', '<=', Carbon::today()
+                ->toDateString());
     }
 
     /**
      * Get the list of Recently Published Articles.
      *
      * @param [type] $query [description]
-     *
      * @return [type] [description]
      */
     public function scopeRecentlyPublished($query)
     {
         return $query->where('status', '=', '1')
-                        ->whereDate('published_at', '<=', Carbon::today()->toDateString())
-                        ->orderBy('published_at', 'desc');
+            ->whereDate('published_at', '<=', Carbon::today()->toDateString())
+            ->orderBy('published_at', 'desc');
     }
 
     /**
      * Create a new factory instance for the model.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    protected static function newFactory()
+    protected static function newFactory(): Factory
     {
         return \Modules\Comment\Database\Factories\CommentFactory::new();
     }

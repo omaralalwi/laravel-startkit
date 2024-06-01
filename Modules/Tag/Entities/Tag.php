@@ -3,7 +3,9 @@
 namespace Modules\Tag\Entities;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphedByMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends BaseModel
@@ -15,7 +17,7 @@ class Tag extends BaseModel
     /**
      * Get all of the posts that are assigned this tag.
      */
-    public function posts()
+    public function posts(): MorphedByMany
     {
         return $this->morphedByMany('Modules\Article\Entities\Post', 'taggable');
     }
@@ -67,10 +69,8 @@ class Tag extends BaseModel
 
     /**
      * Create a new factory instance for the model.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    protected static function newFactory()
+    protected static function newFactory(): Factory
     {
         return \Modules\Tag\Database\Factories\TagFactory::new();
     }

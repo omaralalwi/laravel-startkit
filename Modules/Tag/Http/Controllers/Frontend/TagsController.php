@@ -3,8 +3,8 @@
 namespace Modules\Tag\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
 use Illuminate\Support\Str;
+use Illuminate\View\View;
 
 class TagsController extends Controller
 {
@@ -28,10 +28,8 @@ class TagsController extends Controller
 
     /**
      * Display a listing of the resource.
-     *
-     * @return Response
      */
-    public function index()
+    public function index(): View
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -52,12 +50,8 @@ class TagsController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function show($id)
+    public function show(int $id): View
     {
         $id = decode_id($id);
 

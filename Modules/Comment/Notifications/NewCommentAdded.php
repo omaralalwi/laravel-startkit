@@ -28,11 +28,9 @@ class NewCommentAdded extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param mixed $notifiable
-     *
-     * @return array
+     * @param  mixed  $notifiable
      */
-    public function via($notifiable)
+    public function via($notifiable): array
     {
         return ['slack', 'database'];
     }
@@ -40,56 +38,50 @@ class NewCommentAdded extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
-     * @param mixed $notifiable
-     *
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @param  mixed  $notifiable
      */
-    public function toMail($notifiable)
+    public function toMail($notifiable): MailMessage
     {
         $comment = $this->comment;
         $user = $notifiable;
 
         return (new MailMessage())
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', 'https://laravel.com')
-                    ->line('Thank you for using our application!');
+            ->line('The introduction to the notification.')
+            ->action('Notification Action', 'https://laravel.com')
+            ->line('Thank you for using our application!');
     }
 
     /**
      * Get the Slack representation of the notification.
      *
-     * @param mixed $notifiable
-     *
-     * @return SlackMessage
+     * @param  mixed  $notifiable
      */
-    public function toSlack($notifiable)
+    public function toSlack($notifiable): SlackMessage
     {
         $comment = $this->comment;
         $user = $notifiable;
 
         return (new SlackMessage())
-                ->success()
-                ->from('BlueCube', ':incoming_envelope:')
-                ->content('New Comment: '.$comment->name.' | From:'.$comment->user_name)
-                ->attachment(function ($attachment) use ($comment) {
-                    $attachment->title('Comment '.$comment->id, route('backend.comments.show', $comment->id))
+            ->success()
+            ->from('BlueCube', ':incoming_envelope:')
+            ->content('New Comment: '.$comment->name.' | From:'.$comment->user_name)
+            ->attachment(function ($attachment) use ($comment) {
+                $attachment->title('Comment '.$comment->id, route('backend.comments.show', $comment->id))
                     ->fields([
-                        'Post'    => $comment->post_name,
-                        'User'    => $comment->user_name,
+                        'Post' => $comment->post_name,
+                        'User' => $comment->user_name,
                         'Comment' => $comment->name,
-                        'Status'  => $comment->status_label_text,
+                        'Status' => $comment->status_label_text,
                     ]);
-                });
+            });
     }
 
     /**
      * Get the array representation of the notification.
      *
-     * @param mixed $notifiable
-     *
-     * @return array
+     * @param  mixed  $notifiable
      */
-    public function toDatabase($notifiable)
+    public function toDatabase($notifiable): array
     {
         $comment = $this->comment;
         $user = $notifiable;
@@ -99,13 +91,13 @@ class NewCommentAdded extends Notification implements ShouldQueue
         $url_backend = route('backend.comments.show', $comment->id);
 
         return [
-            'title'         => 'New Comment for review!',
-            'module'        => 'Comment',
-            'type'          => 'created', // created, published, viewed,
-            'icon'          => 'fas fa-comments',
-            'text'          => $text,
-            'url_backend'   => $url_backend,
-            'url_frontend'  => '',
+            'title' => 'New Comment for review!',
+            'module' => 'Comment',
+            'type' => 'created', // created, published, viewed,
+            'icon' => 'fas fa-comments',
+            'text' => $text,
+            'url_backend' => $url_backend,
+            'url_frontend' => '',
         ];
     }
 }

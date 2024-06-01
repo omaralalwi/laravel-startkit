@@ -31,12 +31,8 @@ class TagsController extends BackendBaseController
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     *
-     * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -60,21 +56,17 @@ class TagsController extends BackendBaseController
             $$module_name_singular->save();
         }
 
-        flash(icon()." ".Str::singular($module_title)."' Created.")->success()->important();
+        flash(icon().' '.Str::singular($module_title)."' Created.")->success()->important();
 
-        logUserAccess($module_title.' '.$module_action. " | Id: ". $$module_name_singular->id);
+        logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
         return redirect("admin/$module_name");
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
      */
-    public function show($id)
+    public function show(int $id): Response
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -89,7 +81,7 @@ class TagsController extends BackendBaseController
 
         $posts = $$module_name_singular->posts()->latest()->paginate();
 
-        logUserAccess($module_title.' '.$module_action. " | Id: ". $$module_name_singular->id);
+        logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
         return view(
             "$module_path.$module_name.show",
@@ -99,13 +91,8 @@ class TagsController extends BackendBaseController
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int     $id
-     *
-     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id): Response
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -146,9 +133,9 @@ class TagsController extends BackendBaseController
             }
         }
 
-        flash(icon()." ".Str::singular($module_title)."' Updated Successfully")->success()->important();
+        flash(icon().' '.Str::singular($module_title)."' Updated Successfully")->success()->important();
 
-        logUserAccess($module_title.' '.$module_action. " | Id: ". $$module_name_singular->id);
+        logUserAccess($module_title.' '.$module_action.' | Id: '.$$module_name_singular->id);
 
         return redirect()->back();
     }
