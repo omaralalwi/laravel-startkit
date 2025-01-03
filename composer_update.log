@@ -1,0 +1,82 @@
+Loading composer repositories with package information
+Updating dependencies
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires laravel/framework ^11.0 -> satisfiable by laravel/framework[v11.0.0, ..., 11.x-dev].
+    - Root composer.json requires spatie/laravel-html ^2.28 -> satisfiable by spatie/laravel-html[2.28.0, ..., v2.x-dev].
+    - illuminate/http[v6.0.0, ..., v6.19.1] require php ^7.2 -> your php version (8.2.26) does not satisfy that requirement.
+    - spatie/laravel-html 2.28.0 require php ^7.2 -> your php version (8.2.26) does not satisfy that requirement.
+    - illuminate/http[v7.0.0, ..., v7.28.4] require php ^7.2.5 -> your php version (8.2.26) does not satisfy that requirement.
+    - illuminate/http[v8.0.0, ..., v8.11.2] require php ^7.3 -> your php version (8.2.26) does not satisfy that requirement.
+    - spatie/laravel-html[2.28.1, ..., v2.x-dev] require illuminate/http ^6.0|^7.0|^8.0 -> satisfiable by illuminate/http[v6.0.0, ..., 6.x-dev, v7.0.0, ..., 7.x-dev, v8.0.0, ..., 8.x-dev].
+    - Conclusion: don't install laravel/framework v11.0.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.3 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.4 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.5 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.6 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.7 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.0.8 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.1.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.1.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.2.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.3.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.3.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.4.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.5.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.6.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.7.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.8.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.9.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.9.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.9.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.10.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.11.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.11.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.12.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.13.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.14.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.15.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.16.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.17.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.18.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.18.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.19.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.20.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.21.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.22.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.3 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.4 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.23.5 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.24.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.24.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.25.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.26.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.27.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.27.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.27.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.28.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.28.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.29.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.30.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.31.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.32.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.33.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.33.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.33.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.34.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.34.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.34.2 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.35.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.35.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.36.0 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.36.1 (conflict analysis result)
+    - Conclusion: don't install laravel/framework v11.37.0 (conflict analysis result)
+    - Only one of these can be installed: illuminate/http[dev-master, v1.1.0, v1.1.1, v4.0.0-BETA2, ..., 4.2.x-dev, v5.0.0, ..., 5.8.x-dev, v6.0.0, ..., 6.x-dev, v7.0.0, ..., 7.x-dev, v8.0.0, ..., 8.x-dev, v9.0.0-beta.1, ..., 9.x-dev, v10.0.0, ..., 10.x-dev, v11.0.0, ..., 11.x-dev, 12.x-dev], laravel/framework[v11.0.0, ..., 11.x-dev]. laravel/framework replaces illuminate/http and thus cannot coexist with it.
+
+Use the option --with-all-dependencies (-W) to allow upgrades, downgrades and removals for packages currently locked to specific versions.
