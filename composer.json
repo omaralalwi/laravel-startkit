@@ -7,7 +7,7 @@
     "version": "v8.2.1",
     "require": {
         "php": "^7.3.0",
-        "alexusmai/laravel-file-manager": "^2.5",
+        "alexusmai/laravel-file-manager": "^3.2.0",
         "arcanedev/log-viewer": "^8.0",
         "cviebrock/eloquent-sluggable": "^8.0",
         "doctrine/dbal": "~2.3",
@@ -22,7 +22,7 @@
         "infyomlabs/laravel-generator": "8.0.x-dev",
         "kreait/laravel-firebase": "^3.0",
         "laracasts/flash": "^3.2",
-        "laravel/framework": "^8.0",
+        "laravel/framework": "^11.0",
         "laravel/slack-notification-channel": "^2.2",
         "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.4",
