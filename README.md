@@ -4,6 +4,8 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/omaralalwi/laravel-starter-template?color=%2348C604%20&logo=github&style=flat-square)
 ![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 
+this Repo forked from this [original repo](https://github.com/nasirkhan/laravel-starter)
+
 # Based on Laravel8.x
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
