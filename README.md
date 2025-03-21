@@ -9,11 +9,11 @@ this Repo forked from this [original repo](https://github.com/nasirkhan/laravel-
 # Based on Laravel8.x
 laravel starter Template, to save your time when You start with new scalable Laravel projects with many features.
 
-# [Live Demo](https://larastarter.me)
-you can see all things in live demo
-
 # Thanks
 this repo forked from this project [nasirkhan/laravel-starter](https://github.com/nasirkhan/laravel-starter) with updates and support to RTL and solve arabic language problems
+
+# [Live Demo](https://larastarter.me)
+you can see all things in live demo
 
 ```
 Dashboard Creditional 
