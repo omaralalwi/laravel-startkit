@@ -12,6 +12,9 @@ laravel starter Template, to save your time when You start with new scalable Lar
 # [Live Demo](https://larastarter.me)
 you can see all things in live demo
 
+# Thanks
+this repo forked from this project [nasirkhan/laravel-starter](https://github.com/nasirkhan/laravel-starter) with updates and support to RTL and solve arabic language problems
+
 ```
 Dashboard Creditional 
 Super Admin
